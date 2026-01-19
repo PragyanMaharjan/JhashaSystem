@@ -89,7 +89,6 @@ export default function ComboPage() {
   }
 
   function addToCart() {
-    alert(`Added ${quantity} x ${selectedDish?.title} to cart`);
     closeDish();
   }
 
@@ -139,7 +138,7 @@ export default function ComboPage() {
                     <h2 className="text-2xl font-bold">{combo.title}</h2>
                     <p className="mt-2 font-semibold text-sm">{combo.subtitle}</p>
                     <p className="mt-3 text-sm opacity-90">{combo.description}</p>
-                    <p className="mt-4 text-2xl font-bold">₹{combo.price}</p>
+                    <p className="mt-4 text-2xl font-bold">RS: {combo.price}</p>
                     <div className="mt-2 flex items-center gap-1">
                       <span className="text-yellow-300">★</span>
                       <span className="text-sm">{combo.rating}</span>

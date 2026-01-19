@@ -89,7 +89,6 @@ export default function DrinksPage() {
   }
 
   function addToCart() {
-    alert(`Added ${quantity} x ${selectedDish?.title} to cart`);
     closeDish();
   }
 
@@ -130,7 +129,7 @@ export default function DrinksPage() {
                   <div className="flex-1 p-6 text-white flex flex-col justify-center">
                     <h2 className="text-2xl font-bold">{drink.title}</h2>
                     <p className="mt-2 font-semibold text-sm">{drink.subtitle}</p>
-                    <p className="mt-4 text-lg font-bold">₹{drink.price}</p>
+                    <p className="mt-4 text-lg font-bold">RS: {drink.price}</p>
                     <div className="mt-2 flex items-center gap-1">
                       <span className="text-yellow-300">★</span>
                       <span className="text-sm">{drink.rating}</span>

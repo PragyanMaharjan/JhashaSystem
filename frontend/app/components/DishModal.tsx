@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useCart } from "@/app/context/CartContext";
 
 type Dish = {
   id: string;
@@ -25,7 +29,21 @@ export default function DishModal({
   onClose: () => void;
   onAddToCart: () => void;
 }) {
+  const router = useRouter();
+  const { addToCart } = useCart();
+
   if (!open || !dish) return null;
+
+  const handleAddToCart = () => {
+    addToCart({
+      id: dish.id,
+      title: dish.title,
+      price: dish.price,
+      quantity: quantity,
+      image: dish.image,
+    });
+    onAddToCart();
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center px-3">
@@ -98,10 +116,10 @@ export default function DishModal({
             </div>
 
             <button
-              onClick={onAddToCart}
+              onClick={handleAddToCart}
               className="mt-4 w-full rounded-md bg-[#c14949] py-2 text-sm font-semibold hover:brightness-110 transition"
             >
-              Add To Cart
+              ✓ Add To Cart
             </button>
           </div>
         </div>

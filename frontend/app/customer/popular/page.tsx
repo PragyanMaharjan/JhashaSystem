@@ -89,7 +89,6 @@ export default function PopularPage() {
   }
 
   function addToCart() {
-    alert(`Added ${quantity} x ${selectedDish?.title} to cart`);
     closeDish();
   }
 
@@ -135,7 +134,7 @@ export default function PopularPage() {
                   <div className="flex-1 p-6 text-white flex flex-col justify-center">
                     <h2 className="text-2xl font-bold">{dish.title}</h2>
                     <p className="mt-2 font-semibold text-sm">{dish.subtitle}</p>
-                    <p className="mt-4 text-lg font-bold">₹{dish.price}</p>
+                    <p className="mt-4 text-lg font-bold">RS: {dish.price}</p>
                   </div>
                   <div className="relative w-40 h-48">
                     <Image

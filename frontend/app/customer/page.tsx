@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useCart } from "@/app/context/CartContext";
 
 // Your structure: app/components/DishModal.tsx
 // From app/customer/page.tsx -> ../components/DishModal ✅
@@ -96,7 +97,6 @@ export default function CustomerPage() {
   }
 
   function addToCart() {
-    alert(`Added ${quantity} x ${selectedDish?.title} to cart`);
     closeDish();
   }
 
@@ -402,7 +402,7 @@ export default function CustomerPage() {
                       <p className="mt-2 font-semibold text-indigo-100">{dish.subtitle}</p>
                       <p className="mt-3 text-sm text-white/90 line-clamp-2">{dish.description}</p>
                       <div className="mt-4 flex items-center justify-between">
-                        <span className="text-2xl font-bold">₹{dish.price}</span>
+                        <span className="text-2xl font-bold">RS: {dish.price}</span>
                         <div className="flex items-center gap-2 bg-white/20 px-3 py-1 rounded-full">
                           <span className="text-yellow-300">★</span>
                           <span className="text-sm font-semibold">{dish.rating}</span>

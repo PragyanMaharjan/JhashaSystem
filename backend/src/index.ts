@@ -15,11 +15,9 @@ if (!MONGODB_URI) {
   process.exit(1)
 }
 
-// Middleware
 app.use(express.json())
 app.use(cors())
 
-// Connect to MongoDB
 mongoose
   .connect(MONGODB_URI)
   .then(() => {

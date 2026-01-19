@@ -89,7 +89,6 @@ export default function MainCoursePage() {
   }
 
   function addToCart() {
-    alert(`Added ${quantity} x ${selectedDish?.title} to cart`);
     closeDish();
   }
 
@@ -130,7 +129,7 @@ export default function MainCoursePage() {
                   <div className="flex-1 p-6 text-white flex flex-col justify-center">
                     <h2 className="text-2xl font-bold">{dish.title}</h2>
                     <p className="mt-2 font-semibold text-sm">{dish.subtitle}</p>
-                    <p className="mt-4 text-lg font-bold">₹{dish.price}</p>
+                    <p className="mt-4 text-lg font-bold">RS: {dish.price}</p>
                     <div className="mt-2 flex items-center gap-1">
                       <span className="text-yellow-300">★</span>
                       <span className="text-sm">{dish.rating}</span>
