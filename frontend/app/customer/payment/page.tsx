@@ -214,7 +214,13 @@ export default function PaymentPage() {
                   className="w-5 h-5"
                 />
                 <div className="ml-4 grow">
-                  <p className="text-white font-semibold">📱 Esewa</p>
+                  <div className="flex items-center gap-2">
+                    <img
+                        src="/images/esewa_logo.png"
+                        alt="eSewa"
+                            className="w-6 h-6 object-contain"/>
+                        <p className="text-white font-semibold">eSewa</p>
+                    </div>
                   <p className="text-white/60 text-sm">Fonepay</p>
                 </div>
               </label>
